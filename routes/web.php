@@ -26,12 +26,36 @@ Route::get('/admin', function () {
 
 // Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
-Route::resource('karyawan', 'karyawanController');
-Route::resource('formulir', 'formulirController');
+Route::resource('ikan', 'ikanController');
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('makanan', function () {
+    return view('makanan');
+});
+
+Route::get('ikanlohan', function () {
+    return view('ikanlohan');
+});
+
+Route::get('ikankoi', function () {
+    return view('ikankoi');
+});
+
+Route::get('ikanarwana', function () {
+    return view('ikanarwana');
+});
+
+Route::get('ikancupang', function () {
+    return view('ikancupang');
+});
+
+Route::get('ikanmanfish', function () {
+    return view('ikanmanfish');
+});
+
 
 Route::get('logout', 'Auth\LoginController@logout');
 

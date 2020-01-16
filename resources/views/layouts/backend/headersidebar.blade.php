@@ -37,10 +37,10 @@
 					<ul class="nav metismenu">
 				
 						<li class="nav-dropdown">
-							<a  href="karyawan"><i class="icon dripicons-article"></i><span>Evaluasi Karyawan</span></a>
+							<a  href="Ikan"><i class="icon dripicons-article"></i><span>Tabel</span></a>
 						</li>
 						<li class="nav-dropdown">
-							<a class="has-arrow" href="formulir" ><i class="icon dripicons-browser"></i><span>Kinerja Karyawan</span></a>
+						
 						</li>
 					</nav>
 				</div>
@@ -123,7 +123,6 @@
 					<header class="page-header">
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
-								<h1><a  style="color:black" class="font-italic">Sistem Evaluasi Karyawan Dan Penilaian Kinerja Karyawan</a></h1>
 							</div>
 							<ul class="actions top-right">
 								<li class="dropdown">

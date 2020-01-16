@@ -7,12 +7,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>PT.Netkrom Solusindo </title>
+	<title>Data Penjualan Ikan Hias </title>
 	<!-- ================== GOOGLE FONTS ==================-->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
 	<!-- ======================= GLOBAL VENDOR STYLES ========================-->
 	<link rel="stylesheet" href="/backend/assets/css/vendor/bootstrap.css">
-	<link rel="icon" href="{{ asset ('assets/backend/img/team.png')}}">
+	<link rel="icon" href="img/core-img/clown-fish.png">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="/backend/assets/vendor/metismenu/dist/metisMenu.css">
 	<link rel="stylesheet" href="/backend/assets/vendor/switchery-npm/index.css">
