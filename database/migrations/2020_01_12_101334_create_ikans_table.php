@@ -16,8 +16,10 @@ class CreateIkansTable extends Migration
         Schema::create('ikans', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_ikan');
+            $table->string('kategori_ikan');
             $table->string('jenis_ikan');
-            $table->string('harga_ikan');
+            $table->string('foto');
+            $table->integer('harga_ikan');
             $table->timestamps();
         });
     }

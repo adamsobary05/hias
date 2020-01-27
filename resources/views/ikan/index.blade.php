@@ -29,7 +29,9 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Ikan</th>
+                                    <th>Kategori Ikan</th>
                                     <th>Jenis Ikan</th>
+                                    <th>Foto</th>
                                     <th>Harga Ikan </th>
                                     <th colspan="3" style="text-align: center;">Aksi</th>
                                 </tr>
@@ -39,7 +41,10 @@
                     <tr>
                         <td>{{ $no++ }}</td>
                         <td>{{ $data->nama_ikan }}</td>
+                        <td>{{ $data->kategori_ikan}}</td>
                         <td>{{ $data->jenis_ikan }}</td>
+                        <td><img src="{{asset('assets/img/ikan/' .$data->foto. '')}}"
+                        style="width:120px; height:120px;" alt="Foto"></td>
                         <td>{{ $data->harga_ikan }}</td>
                         <td><a href="{{ route('ikan.edit', $data->id) }}" class="fa  fa-edit"></a></td>
                         <td><a href="{{ route('ikan.show', $data->id) }}" class="fa fa-eye"></a></td>
