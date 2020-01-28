@@ -32,30 +32,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('makanan', function () {
-    return view('makanan');
+Route::get('/products', function () {
+    return view('products');
 });
 
-Route::get('ikanlohan', function () {
-    return view('ikanlohan');
+Route::get('/checkout', function () {
+    return view('checkout');
 });
 
-Route::get('ikankoi', function () {
-    return view('ikankoi');
+Route::get('/blank', function () {
+    return view('blank');
 });
 
-Route::get('ikanarwana', function () {
-    return view('ikanarwana');
+Route::get('/ikan-koi', function () {
+    return view('ikan-koi');
 });
-
-Route::get('ikancupang', function () {
-    return view('ikancupang');
-});
-
-Route::get('ikanmanfish', function () {
-    return view('ikanmanfish');
-});
-
 
 Route::get('logout', 'Auth\LoginController@logout');
 
