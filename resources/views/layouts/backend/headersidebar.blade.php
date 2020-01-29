@@ -37,7 +37,7 @@
 					<ul class="nav metismenu">
 				
 						<li class="nav-dropdown">
-							<a  href="Ikan"><i class="icon dripicons-article"></i><span>Kategori Ikan</span></a>
+							<a  href="Ikan"><i class="icon dripicons-article"></i><span>Penjualan Ikan Hias Air Tawar</span></a>
 						</li>
 						<li class="nav-dropdown">
 						

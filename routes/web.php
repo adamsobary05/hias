@@ -28,9 +28,7 @@ Route::get('/admin', function () {
 
 Route::resource('ikan', 'ikanController');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'FrontendController@show');
 
 Route::get('/products', function () {
     return view('products');

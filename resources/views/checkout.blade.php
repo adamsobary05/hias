@@ -530,7 +530,6 @@
 							<ul class="custom-menu">
 								<li><a href="/">Home</a></li>
 								<li><a href="products">Products</a></li>
-								<li><a href="product">Product Details</a></li>
 								<li><a href="checkout">Checkout</a></li>
 							</ul>
 						</li>

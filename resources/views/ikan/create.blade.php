@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                        <input type="number"  name="harga_ikan" class="form-control" placeholder="Harga Ikan">
+                                        <input type="text"  name="harga_ikan" class="form-control uang" placeholder="Harga Ikan">
                                         </div>
                                     </div>
                                 </div>

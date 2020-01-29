@@ -19,7 +19,7 @@ class CreateIkansTable extends Migration
             $table->string('kategori_ikan');
             $table->string('jenis_ikan');
             $table->string('foto');
-            $table->integer('harga_ikan');
+            $table->string('harga_ikan');
             $table->timestamps();
         });
     }

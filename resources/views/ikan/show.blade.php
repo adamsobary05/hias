@@ -35,7 +35,7 @@
                                     <br><br>
                             <div class="col">
                                 <label for="">Harga Ikan</label>
-                                               <input type="number"  name="harga_ikan" value="{{ $ikan->harga_ikan }}" class="form-control" disabled>
+                                               <input type="text"  name="harga_ikan" value="{{ $ikan->harga_ikan }}" class="form-control" disabled>
                                         </div>
                                     </div>
                                     <br>

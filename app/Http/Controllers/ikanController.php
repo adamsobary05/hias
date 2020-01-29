@@ -88,7 +88,8 @@ class ikanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ikan = ikan::findOrFail($id);
+        return view('ikan.edit', compact('ikan'));
     }
 
     /**
@@ -111,6 +112,9 @@ class ikanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ikan = ikan::findOrFail($id);
+        $ikan = ikan::findOrFail($id);
+        $ikan->delete();
+        return redirect()->route('ikan.index')->with('notif', 'Data Berhasil Dihapus');
     }
 }

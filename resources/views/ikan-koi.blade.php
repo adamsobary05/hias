@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>E-SHOP HTML Template</title>
+	<title>Ikan Koi</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
@@ -530,7 +530,6 @@
 							<ul class="custom-menu">
 								<li><a href="/">Home</a></li>
 								<li><a href="products">Products</a></li>
-								<li><a href="product">Product Details</a></li>
 								<li><a href="checkout">Checkout</a></li>
 							</ul>
 						</li>
