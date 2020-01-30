@@ -79,6 +79,7 @@
 														<script src="{{ asset('assets/backend/assets/js/cards/users-chart.js') }}"></script>
 														<script src="{{ asset('assets/backend/assets/js/cards/bounce-rate-chart.js') }}"></script>
 														<script src="{{ asset('assets/backend/assets/js/cards/session-duration-chart.js') }}"></script>
+														@yield('js')
 														@yield('js-ajax')
 													</body>
 
