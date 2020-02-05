@@ -13,7 +13,7 @@
     <div class="row">
                 <div class="col-lg-12">
                     {{-- <center><img src="assets/backend/img/netkrom.jpg" width="20%"></center> --}}
-                <center><a><h3 style="color:black">Penjualan Ikan Hias</a></h3></center>
+                <center><a><h3 style="color:black">Data Ikan Hias</a></h3></center>
                 </div>
             </div>
             <center>
@@ -57,11 +57,11 @@
                         <table id="bs4-table" class="table table-striped table-bordered dataTable" style="width: 100%;" role="grid" aria-describedby="bs4-table_info">
 					<thead>
                         <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 54px;">Name</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 59px;">Nama Ikan</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 51px;">Kategori Ikan</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 28px;">Jenis Ikan</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 52px;">Foto</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 52px;">Harga Ikan</th></tr>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 80px;">Nama Ikan</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Kategori Ikan</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 90px;">Jenis Ikan</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 90px;">Foto</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 100px;">Harga Ikan</th></tr>
                     </thead>
                      <tbody>	
                         @php $no =1; @endphp
@@ -75,7 +75,6 @@
                                                      style="width:120px; height:120px;" alt="Foto"></td>
                                             <td>{{ $data->harga_ikan }}</td>       
                         <td><a href="{{ route('ikan.edit', $data->id) }}" class="fa  fa-edit"></a></td>
-                        <td><a href="{{ route('ikan.show', $data->id) }}" class="fa fa-eye"></a></td>
                         <td><form action="{{ route('ikan.destroy', $data->id) }}" method="post">
                             {{ csrf_field() }}
                             @if (session('notif'))
@@ -99,7 +98,6 @@
     </div>
 					
                 <div class="row"><div class="col-sm-12 col-md-5">
-                <div class="dataTables_info" id="bs4-table_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
                 </div>
                 <div class="col-sm-12 col-md-7">
                   <div class="dataTables_paginate paging_simple_numbers" id="bs4-table_paginate">

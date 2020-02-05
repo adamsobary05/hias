@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+<link href="{{asset('assets/backend/css/bootstrap.min.css" rel="stylesheet')}}">
+  <!-- bootstrap theme -->
+  <link href="{{asset('assets/backend/css/bootstrap-theme.css" rel="stylesheet')}}">
+  <!--external css-->
+  <!-- font icon -->
+  <link href="{{asset('assets/backend/css/elegant-icons-style.css" rel="stylesheet')}}"/>
+  <link href="{{asset('assets/backend/css/font-awesome.css" rel="stylesheet')}}" />
+  <!-- Custom styles -->
+  <link href="{{asset('assets/backend/css/style.css" rel="stylesheet')}}">
+  <link href="{{asset('assets/backend/css/style-responsive.css" rel="stylesheet')}}"/>
+
 @section('content')
 <body style="background-image: url(backend/assets/img/avatars/background.jpg); background-size:100%">
 <div class="container">

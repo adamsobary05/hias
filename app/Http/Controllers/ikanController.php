@@ -76,8 +76,7 @@ class ikanController extends Controller
      */
     public function show($id)
     {
-        $ikan = ikan::findOrFail($id);
-        return view('ikan.show', compact('ikan'));
+        //
     }
 
     /**

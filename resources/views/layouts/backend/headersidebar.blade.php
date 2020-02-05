@@ -37,9 +37,13 @@
 					<ul class="nav metismenu">
 				
 						<li class="nav-dropdown">
-							<a  href="Ikan"><i class="icon dripicons-article"></i><span>Penjualan Ikan Hias Air Tawar</span></a>
+							<a  href="ikan"><i class="icon dripicons-article"></i><span>Data Ikan Hias Air Tawar</span></a>
 						</li>
-						<li class="nav-dropdown">
+						
+							<li class="nav-dropdown">
+							<a  href="makanan"><i class="icon dripicons-article"></i><span>Data makanan Ikan Hias </span></a>
+						</li>
+						
 						
 						</li>
 					</nav>

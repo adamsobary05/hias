@@ -27,23 +27,18 @@ Route::get('/admin', function () {
 // Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 Route::resource('ikan', 'ikanController');
+Route::resource('makanan', 'makananController');
 
 Route::get('/', 'FrontendController@show');
+// Route::get('/', 'FrontendController@laut');
+Route::get('makan', 'FrontendController@lihat');
 
-Route::get('/products', function () {
-    return view('products');
-});
+// Route::get('/makanan', function () {
+//     return view('makanan');
+// });
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
-
-Route::get('/blank', function () {
-    return view('blank');
-});
-
-Route::get('/ikan-koi', function () {
-    return view('ikan-koi');
+Route::get('/masuk', function () {
+    return view('masuk');
 });
 
 Route::get('logout', 'Auth\LoginController@logout');

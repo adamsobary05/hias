@@ -13,7 +13,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div>
-                <div class="card-header">Perpanjang Kontrak ikan</div>
+                <div class="card-header">ikan</div>
                 <div class="card-body">
                     <form action="{{ route('ikan.update', $ikan->id) }}" method="post" enctype="multipart/form-data">
                         <input name="_method" type="hidden" value="PATCH">
