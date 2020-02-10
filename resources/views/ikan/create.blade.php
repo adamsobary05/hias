@@ -27,7 +27,11 @@
                                      </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                        <input type="text"  name="kategori_ikan" class="form-control" placeholder="Kategori Ikan">
+                                       <select name="id_kategori" id="" class="form-control">
+                                          @foreach ($kategori as $item)
+                                       <option value="{{$item->id }}">{{$item->kategori_ikan}}</option>
+                                          @endforeach
+                                       </select>
                                         </div>
                                     </div>
                                    
@@ -47,8 +51,13 @@
                                 </div>
 
                                 <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="keterangan">Keterangan</label>
+                                        <textarea name="keterangan" id="" cols="30" rows="10" class="form-control" style="resize:none"></textarea>
+                                    </div>
                                     <div class="col-md-4">
                                     <div class="form-group">
+                                        <label for="foto">Gambar Ikan</label>
                                         <input class="form-control 
                                         @error('foto') is-invalid @enderror" type="file" 
                                         name="foto" id="" required>    

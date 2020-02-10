@@ -27,10 +27,14 @@ Route::get('/admin', function () {
 // Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 Route::resource('ikan', 'ikanController');
+
+// Route::get('/ikan', 'ikanController@index');
+
 Route::resource('makanan', 'makananController');
+// Route::resource('airlaut', 'airlautController');
 
 Route::get('/', 'FrontendController@show');
-// Route::get('/', 'FrontendController@laut');
+// Route::get('/laut', 'FrontendController@laut');
 Route::get('makan', 'FrontendController@lihat');
 
 // Route::get('/makanan', function () {

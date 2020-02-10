@@ -11,16 +11,9 @@ class FrontendController extends Controller
 
     public function show()
     {
-        $ikan = ikan::all();
-
-        return view('welcome', compact('ikan'));
-    }
-
-    public function laut()
-    {
-        $ikan = ikan::all();
-
-        return view('welcome', compact('ikan'));
+        $ikan_tawar = ikan::where('id_kategori', '=', '1')->get();
+        $ikan_laut = ikan::where('id_kategori', '=', '2')->get();
+        return view('welcome', compact('ikan_tawar', 'ikan_laut'));
     }
 
     public function lihat()

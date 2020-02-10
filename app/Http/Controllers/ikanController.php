@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ikan;
+use App\Kategori;
 use Auth;
 use Session;
 use File;
@@ -29,7 +30,9 @@ class ikanController extends Controller
     public function create()
     {
         $ikan = ikan::all();
-        return view('ikan.create', compact('ikan'));
+        $kategori = Kategori::all();
+
+        return view('ikan.create', compact('ikan', 'kategori'));
     }
 
     /**
@@ -42,18 +45,19 @@ class ikanController extends Controller
     {
         $this->validate($request, [
             'nama_ikan' => 'required|unique:ikans',
-            'kategori_ikan' => 'required',
+            'id_kategori' => 'required',
             'jenis_ikan' => 'required',
             'foto' => 'required|mimes:jpeg,jpg,png,gif|max:2048',
-            'harga_ikan' => 'required'
+            'harga_ikan' => 'required',
+            'keterangan' => 'required'
         ]);
         $ikan = new ikan();
         $ikan->nama_ikan = $request->nama_ikan;
-        $ikan->kategori_ikan = $request->kategori_ikan;
+        $ikan->id_kategori = $request->id_kategori;
         $ikan->jenis_ikan = $request->jenis_ikan;
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
-            $path = public_path() . '/assets/img/ikan';
+            $path = public_path() . '/img/ikan';
             $filename = str_random(6) . '_'
                 . $file->getClientOriginalName();
             $upload = $file->move(
@@ -63,7 +67,9 @@ class ikanController extends Controller
             $ikan->foto = $filename;
         }
         $ikan->harga_ikan = $request->harga_ikan;
+        $ikan->keterangan = $request->keterangan;
         $ikan->save();
+
         return redirect()->route('ikan.index');
         //foto
     }

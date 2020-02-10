@@ -543,7 +543,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/banner-05.jpg" alt="IMG-BENNER">
+						<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-BENNER">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -557,7 +557,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/banner-03.jpg" alt="IMG-BENNER">
+						<img src="{{asset('assets/frontend/images/koi2.jpg')}}" alt="IMG-BENNER">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -571,7 +571,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/banner-10.jpg" alt="IMG-BENNER">
+						<img src="{{asset('assets/frontend/images/koi3.jpg')}}" alt="IMG-BENNER">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -588,13 +588,6 @@
 
 	<!-- Our product -->
 	<section class="newproduct bgwhite p-t-45 p-b-105">
-		<div class="container">
-			<div class="sec-title p-b-60">
-				<h3 class="m-text5 t-center">
-					Makanan Ikan Hias
-				</h3>
-			</div>
-
 			<!-- Slide2 -->
 			<div class="wrap-slick2">
 				<div class="slick2">
@@ -642,23 +635,20 @@
 
 
 	<!-- Banner video -->
-	<section class="parallax0 parallax100" style="background-image: url(images/bg-video-01.jpg);">
+	{{-- <section class="parallax0 parallax100" style="background-image: url(assets/frontend/images/koi1.jpg);">
 		<div class="overlay0 p-t-190 p-b-200">
 			<div class="flex-col-c-m p-l-15 p-r-15">
 				<span class="m-text9 p-t-45 fs-20-sm">
 					The Beauty
 				</span>
-
+			<video src="{{asset('assets/frontend/video/koi.mp4') }}" type="video/mp4" controls></video>
 				<h3 class="l-text1 fs-35-sm">
 					Lookbook
 				</h3>
-
-				<span class="btn-play s-text4 hov5 cs-pointer p-t-25" data-toggle="modal" data-target="#modal-video-01">
-					<i class="fa fa-play" aria-hidden="true"></i>
-					Play Video
-				</span>
 			</div>
-		</div>
+		</div> --}}
+		
+			
 	</section>
 
 	<!-- Blog -->
@@ -666,7 +656,7 @@
 		<div class="container">
 			<div class="sec-title p-b-52">
 				<h3 class="m-text5 t-center">
-					Our Blog
+					Merk Makanan Ikan Hias
 				</h3>
 			</div>
 
@@ -675,22 +665,16 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="{{asset('assets/frontend/images/judul.jpg')}}" alt="IMG-BLOG">
+							<img src="{{asset('assets/frontend/images/tes1.jpg')}}" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
 								<a href="blog-detail.html" class="m-text11">
-									Black Friday Guide: Best Sales & Discount Codes
+									BloodWorms Makanan Ikan Hias
 								</a>
 							</h4>
 
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
-
-							<p class="s-text8 p-t-16">
-								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
-							</p>
 						</div>
 					</div>
 				</div>
@@ -705,16 +689,9 @@
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
 								<a href="blog-detail.html" class="m-text11">
-									The White Sneakers Nearly Every Fashion Girls Own
+									Tetra Makanan Ikan Hias
 								</a>
 							</h4>
-
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 18, 2017</span>
-
-							<p class="s-text8 p-t-16">
-								Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit ame
-							</p>
 						</div>
 					</div>
 				</div>
@@ -723,22 +700,15 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-03.jpg" alt="IMG-BLOG">
+							<img src="{{asset('assets/frontend/images/tes.jpg')}}" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
 								<a href="blog-detail.html" class="m-text11">
-									New York SS 2018 Street Style: Annina Mislin
+									Cacing Beku Makanan Ikan Hias
 								</a>
 							</h4>
-
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 2, 2017</span>
-
-							<p class="s-text8 p-t-16">
-								Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit amet maximus nunc
-							</p>
 						</div>
 					</div>
 				</div>
@@ -751,7 +721,7 @@
 	<!-- Shipping -->
 
 	<!-- Footer -->
-	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+	{{-- <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
 		<div class="flex-w p-b-90">
 			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
@@ -943,7 +913,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 
 <!--===============================================================================================-->
 	<script type="text/javascript" src="{{asset('assets/frontend/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
@@ -992,6 +962,7 @@
 	</script>
 <!--===============================================================================================-->
 	<script src="{{asset('assets/frontend/js/main.js') }}"></script>
-
+	
+	
 </body>
 </html>

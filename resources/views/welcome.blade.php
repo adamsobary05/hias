@@ -178,14 +178,11 @@
 
 				<div class="topbar-child2">
 					<span class="topbar-email">
-						fashe@example.com
+						{{-- {{ Auth::user()->name }} </h5>
+						<span>{{ Auth::user()->email }}</span> --}}
 					</span>
 
 					<div class="topbar-language rs1-select2">
-						<select class="selection-1" name="time">
-							<option>USD</option>
-							<option>EUR</option>
-						</select>
 					</div>
 
 					<!--  -->
@@ -464,52 +461,156 @@
 	</section>
 
 	<!-- New Product -->
-	<section class="newproduct bgwhite p-t-45 p-b-105">
+	<section class="bgwhite p-t-45 p-b-58">
 		<div class="container">
-			<div class="sec-title p-b-60">
+			<div class="sec-title p-b-22">
 				<h3 class="m-text5 t-center">
-				Nama Ikan Hias Air Tawar Dan Harga Nya
+					Kategori Ikan
 				</h3>
 			</div>
 
-			<!-- Slide2 -->
-			<div class="wrap-slick2">
-				<div class="slick2">
-					@foreach ($ikan as $data)
-					<div class="item-slick2 p-l-15 p-r-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="/assets/img/ikan/{{ $data->foto }}" alt="" >
+			<!-- Tab01 -->
+			<div class="tab01">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#air_tawar" role="tab">Ikan Hias Air Tawar</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#air_laut" role="tab">Ikan Hias Air Laut</a>
+					</li>
+				</ul>
 
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
+				<!-- Tab panes -->
+				<div class="tab-content p-t-35">
+					<!-- - -->
+					<div class="tab-pane fade show active" id="air_tawar" role="tabpanel">
+						<div class="row">
+							@foreach ($ikan_tawar as $data )
+							<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+								<!-- Block2 -->
+								<div class="block2">
+									<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+										<img src="/img/ikan/{{ $data->foto }}"  alt="IMG-PRODUCT">
 
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
+										<div class="block2-overlay trans-0-4">
+											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+												<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+												<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+											</a>
+
+											<div class="block2-btn-addcart w-size1 trans-0-4">
+												<!-- Button -->
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+													Add to Cart
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="block2-txt p-t-20">
+										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+											<b>{{ $data->nama_ikan }}</b>
+										</a>
+										<p><b>{{ $data->kategori->kategori_ikan}}</b></p>
+										<span class="block2-price m-text6 p-r-5">
+											<b>{{ $data->harga_ikan }}</b>
+										</span>
 									</div>
 								</div>
 							</div>
+							@endforeach
 
-							<div class="block2-txt p-t-20">
-								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-								<b>{{$data->nama_ikan}}</b>
-								</a>
 
-								<span class="block2-price m-text6 p-r-5">
-									<b>{{$data->harga_ikan}}</b>
-								</span>
+									<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+								<!-- Block2 -->
+								<div class="block2">
+									<div class="block2-img wrap-pic-w of-hidden pos-relative">
+										
+
+										<div class="block2-overlay trans-0-4">
+					
+											<div class="block2-btn-addcart w-size1 trans-0-4">
+												<!-- Button -->
+											
+											</div>
+										</div>
+									</div>
+
+									<div class="block2-txt p-t-20">
+								
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					@endforeach
-			
+
+					<div class="tab-pane fade" id="air_laut" role="tabpanel">
+						<div class="row">
+							@foreach ($ikan_laut as $data )
+							<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+								<!-- Block2 -->
+								<div class="block2">
+									<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+										<img src="/img/ikan/{{ $data->foto }}"  alt="IMG-PRODUCT">
+
+										<div class="block2-overlay trans-0-4">
+											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+												<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+												<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+											</a>
+
+											<div class="block2-btn-addcart w-size1 trans-0-4">
+												<!-- Button -->
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+													Add to Cart
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="block2-txt p-t-20">
+										<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+											<b>{{ $data->nama_ikan }}</b>
+										</a>
+										<p><b>{{ $data->kategori->kategori_ikan}}</b></p>
+
+										<span class="block2-price m-text6 p-r-5">
+											<b>{{ $data->harga_ikan }}</b>
+										</span>
+									</div>
+								</div>
+							</div>
+							@endforeach
+
+
+									<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+								<!-- Block2 -->
+								<div class="block2">
+									<div class="block2-img wrap-pic-w of-hidden pos-relative">
+										
+
+										<div class="block2-overlay trans-0-4">
+					
+											<div class="block2-btn-addcart w-size1 trans-0-4">
+												<!-- Button -->
+											
+											</div>
+										</div>
+									</div>
+
+									<div class="block2-txt p-t-20">
+								
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<!-- Banner2 -->
@@ -609,7 +710,7 @@
 		<div class="container">
 			<div class="sec-title p-b-52">
 				<h3 class="m-text5 t-center">
-					Our Blog
+					Aquarium Ikan Hias
 				</h3>
 			</div>
 
@@ -618,22 +719,19 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-						<img src="{{ asset('assets/frontend/images/pelet.jpg')}}" alt="IMG-BLOG">
+						<img src="{{ asset('assets/frontend/images/aqu1.jpg')}}" style="width:112%; height:112% " alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
 								<a href="blog-detail.html" class="m-text11">
-									Black Friday Guide: Best Sales & Discount Codes
+									1.Aquarium bentuk kaca biasa.
+  									Aquarium kaca biasa   Aquarium jenis ini bisa dapat anda dapatkan di toko ikan hias air tawar di kota anda atau anda dapat memesan langsung pada toko kaca terdekat agar ukurannya dapat disesuaikan dengan yang anda mau. Harga bervariasi mulai dari Rp. 100.000 sampai dengan Rp. 250.000    
 								</a>
 							</h4>
 
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
-
-							<p class="s-text8 p-t-16">
-								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
-							</p>
+							{{-- <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> --}}
 						</div>
 					</div>
 				</div>
@@ -642,22 +740,22 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="{{asset('assets/frontend/images/pelet.jpg')}}" alt="IMG-BLOG">
+							<img src="{{asset('assets/frontend/images/aqqu2.jpg')}}" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
 								<a href="blog-detail.html" class="m-text11">
-									The White Sneakers Nearly Every Fashion Girls Own
+								2.aquarium berbahan kaca ber-merk biasa dipilih karena lebih cenderung kepada unsur estetika, saya pikir estetika memang harus menjadi alasan utama karena itu alasan anda ingin memelihara ikan hias air tawar di tempat anda. Harga aquarium ini bervariasi mulai dari Rp. 85.000 untuk berbahan akrilik dengan merk GEX sampai dengan Rp. 2.000.000 untuk merk Nisso.
 								</a>
 							</h4>
 
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 18, 2017</span>
+							{{-- <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+							<span class="s-text6">on</span> <span class="s-text7">July 18, 2017</span> --}}
 
-							<p class="s-text8 p-t-16">
+							{{-- <p class="s-text8 p-t-16">
 								Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit ame
-							</p>
+							</p> --}}
 						</div>
 					</div>
 				</div>
@@ -666,22 +764,16 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/pelet.jpg" alt="IMG-BLOG">
+							<img src="{{asset('assets/frontend/images/aqu2.jpg')}}" style="width:125%; height:125% " alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
 								<a href="blog-detail.html" class="m-text11">
-									New York SS 2018 Street Style: Annina Mislin
+									3.Ikan-ikan hias ini dipelihara untuk kesenangan, oleh karena itu bentuk, warna, ukuran, keserasian, dan kebiasaannya benar-benar harus diperhatikan. Salah satu jenis ikan hias yang sering dipelihara adalah jenis ikan hias air tawar.
+									Hampir 75% pasokan ikan hias air tawar di dunia berasal dari Indonesia, dan sekurang-kurangnya 363 jenis ikan hias air tawar dari Indonesia telah diekspor ke berbagai negara di dunia.
 								</a>
 							</h4>
-
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 2, 2017</span>
-
-							<p class="s-text8 p-t-16">
-								Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit amet maximus nunc
-							</p>
 						</div>
 					</div>
 				</div>
