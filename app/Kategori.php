@@ -12,4 +12,9 @@ class Kategori extends Model
     {
         return $this->hasMany('App\ikan', 'id_kategori');
     }
+
+    public function databarang()
+    {
+        return $this->hasMany('App\databarang', 'id_kategori');
+    }
 }

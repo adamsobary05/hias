@@ -2,6 +2,7 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
 <link rel="stylesheet" href="{{asset('assets/backend/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
+<link rel="stylesheet" href="{{asset('assets/backend/css/font-awesome.min.css')}}">
 @endsection
 
 @section('js')
@@ -13,17 +14,16 @@
     <div class="row">
                 <div class="col-lg-12">
                     {{-- <center><img src="assets/backend/img/netkrom.jpg" width="20%"></center> --}}
-                <center><a><h3 style="color:black">Data Ikan Hias</a></h3></center>
+                <center><a><h3 style="color:black">Data customer</a></h3></center>
                 </div>
             </div>
-            <center>
-                <body style="background-image: url(backend/assets/img/avatars/background.jpg); background-size:100%">
+            {{-- <center>
+                <body style="background-image: url(backend/assets/img/avatars/background.jpg); background-size:100%"> --}}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-15">
                 <div style="background-color:transparent">
                     <br>
-                    <center><a href="{{ route('airlaut.create') }}" class="fa fa-plus-circle"></a></center>
                         <br>
                         <div class="table-responsive">
                             @if (session('pesan'))
@@ -36,6 +36,8 @@
 							<div class="col-12">
 							<div class="card">
 							<div class="card-body">
+                 <center><a href="{{ route('customer.create') }}" title="Tambah Data" type="button">
+                  <i class="fa fa-plus-circle" style="font-size: 25px"> </i></a></center>
 							<div id="bs4-table_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
                       <div class="row"><div class="col-sm-12 col-md-6">
                         <div class="dataTables_length" id="bs4-table_length">
@@ -53,53 +55,52 @@
                           </div>
                         </div>
                       </div>
-                      <div class="row"><div class="col-sm-12">
+                      <div class="row">
+                        <div class="col-sm-12">
+                         
                         <table id="bs4-table" class="table table-striped table-bordered dataTable" style="width: 100%;" role="grid" aria-describedby="bs4-table_info">
-					<thead>
-                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 54px;">Name</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 80px;">Nama Ikan</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Kategori Ikan</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 90px;">Jenis Ikan</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 90px;">Foto</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 100px;">Harga Ikan</th></tr>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 100px;">Keterangan</th></tr>
-                        </thead>
+					          <thead>
+                        <tr role="row">
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 10px;">No</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 80px;">Nama</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Nomor_Telepon</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 90px;">Alamat</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 100px;">Jenis_kelamin</th>
+                          <th>Aksi</th>
+                        </tr>
+                    </thead>
                      <tbody>	
                         @php $no =1; @endphp
-                        @foreach($airlaut as $data)
-								<tr role="row" class="odd">
-										<td class="sorting_1">{{ $no++ }}</td>
-											<td>{{ $data->nama_ikan }}</td>
-											<td>{{$data->kategori_ikan}}</td>
-											<td>{{$data->jenis_ikan}}</td>
-											<td><img src="{{asset('assets/img/ikan/' .$data->foto. '')}}"
-                      style="width:120px; height:120px;" alt="Foto"></td>
-                      <td>{{ $data->harga_ikan }}</td>
-                      <td>{{ $data->keterangan}} </td>       
-                      <td><a href="{{ route('airlaut.edit', $data->id) }}" class="fa  fa-edit"></a></td>
-                      <td><form action="{{ route('airlaut.destroy', $data->id) }}" method="post">
-                            {{ csrf_field() }}
-                            @if (session('notif'))
-                            <div class="alert alert-info">
-                                <b></b>{{ session('notif') }}
-                            </div>
-                            @endif
+                  @foreach($customer as $data)
+								      <tr role="row" class="odd">
+										      <td class="sorting_1">{{ $no++ }}</td>
+											    <td>{{ $data->nama }}</td>
+											    <td>{{$data->no_telepon}}</td>
+                          <td>{{ $data->alamat}}</td>       
+                          <td>{{ $data->jenis_kelamin }}</td>
+                          <td>
+                          <a href="{{ route('customer.edit', $data->id) }}" title="Edit" class="btn btn-warning btn-sm">
+                          <i class="fa fa-pencil-square" style="font-size: 16px;color:#fff;"></i>
+                          </a>
+                          <br>
+                          <form action="{{ route('customer.destroy', $data->id) }}" method="post">
+                               {{ csrf_field() }}
+                          @if (session('notif'))
+                              <div class="alert alert-info">
+                              <b></b>{{ session('notif') }}
+                          </div>
+                          @endif
                             <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="fa fa-trash"></button>
+                            <button type="submit"class="btn btn-danger btn-sm" title="Hapus">
+                              <i class="fa fa-trash-o" style="font-size: 16px;color:#fff;"></i>
+                            </button>
                         </form>
                         </td>
                     </tr>
-                        </tbody>
+                    </tbody>
                     @endforeach
                     </table>
-                </div>
-            </center>
-        </div>
-         </div>
-                </div>
-    </div>
-					
-                <div class="row"><div class="col-sm-12 col-md-5">
+                         <div class="row"><div class="col-sm-12 col-md-5">
                 </div>
                 <div class="col-sm-12 col-md-7">
                   <div class="dataTables_paginate paging_simple_numbers" id="bs4-table_paginate">
@@ -129,6 +130,12 @@
                         <a href="#" aria-controls="bs4-table" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
                       </li>
                     </ul>
+                </div>
+            </center>
+        </div>
+         </div>
+                </div>
+    </div>
                   </div>
                 </div>
               </div>

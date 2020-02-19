@@ -17,8 +17,8 @@
                 <center><a><h3 style="color:black">Data Ikan Hias</a></h3></center>
                 </div>
             </div>
-            <center>
-                <body style="background-image: url(backend/assets/img/avatars/background.jpg); background-size:100%">
+            {{-- <center>
+                <body style="background-image: url(backend/assets/img/avatars/background.jpg); background-size:100%"> --}}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-15">
@@ -105,14 +105,7 @@
                     </tbody>
                     @endforeach
                     </table>
-                </div>
-            </center>
-        </div>
-         </div>
-                </div>
-    </div>
-					
-                <div class="row"><div class="col-sm-12 col-md-5">
+                         <div class="row"><div class="col-sm-12 col-md-5">
                 </div>
                 <div class="col-sm-12 col-md-7">
                   <div class="dataTables_paginate paging_simple_numbers" id="bs4-table_paginate">
@@ -142,6 +135,12 @@
                         <a href="#" aria-controls="bs4-table" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
                       </li>
                     </ul>
+                </div>
+            </center>
+        </div>
+         </div>
+                </div>
+    </div>
                   </div>
                 </div>
               </div>

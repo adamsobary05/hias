@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/ikan';
+    protected $redirectTo = '/admin/ikan';
 
     /**
      * Create a new controller instance.

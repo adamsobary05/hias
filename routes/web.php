@@ -23,26 +23,30 @@ Route::get('/admin', function () {
 // Route::get('dashboardfrontend', function () {
 //     return view('dashboardfrontend');
 // });
-
-// Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-
-Route::resource('ikan', 'ikanController');
-
-// Route::get('/ikan', 'ikanController@index');
-
-Route::resource('makanan', 'makananController');
-// Route::resource('airlaut', 'airlautController');
-
 Route::get('/', 'FrontendController@show');
 // Route::get('/laut', 'FrontendController@laut');
 Route::get('makan', 'FrontendController@lihat');
 
-// Route::get('/makanan', function () {
-//     return view('makanan');
-// });
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+
+    Route::resource('ikan', 'ikanController');
+    Route::resource('databarang', 'databarangController');
+    Route::resource('customer', 'customerController');
+
+    Route::resource('makanan', 'makananController');
+    // Route::resource('airlaut', 'airlautController');
+
+
+    // Route::get('/makanan', function () {
+    //     return view('makanan');
+});
 
 Route::get('/masuk', function () {
     return view('masuk');
+});
+
+Route::get('/cart', function () {
+    return view('cart');
 });
 
 Route::get('logout', 'Auth\LoginController@logout');

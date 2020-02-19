@@ -44,6 +44,14 @@
 							<a  href="makanan"><i class="icon dripicons-article"></i><span>Data makanan Ikan Hias </span></a>
 						</li>
 						
+							<li class="nav-dropdown">
+							<a  href="databarang"><i class="icon dripicons-article"></i><span>Data Barang</span></a>
+						</li>
+
+							<li class="nav-dropdown">
+							<a  href="customer"><i class="icon dripicons-article"></i><span>Data Customer</span></a>
+						</li>
+
 						</li>
 					</nav>
 				</div>

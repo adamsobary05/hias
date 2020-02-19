@@ -13,7 +13,7 @@
     <div class="row">
                 <div class="col-lg-12">
                     {{-- <center><img src="assets/backend/img/netkrom.jpg" width="20%"></center> --}}
-                <center><a><h3 style="color:black">Data Makanan Ikan Hias</a></h3></center>
+                <center><a><h3 style="color:black">Data Barang Ikan Hias Dan Makanan</a></h3></center>
                 </div>
             </div>
             <center>
@@ -23,6 +23,7 @@
             <div class="col-md-15">
                 <div style="background-color:transparent">
                     <br>
+                    <center><a href="{{ route('databarang.create') }}" class="fa fa-plus-circle"></a></center>
                         <br>
                         <div class="table-responsive">
                             @if (session('pesan'))
@@ -36,8 +37,7 @@
 							<div class="card">
 							<div class="card-body">
 							<div id="bs4-table_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
-                     <center><a href="{{ route('makanan.create') }}" class="fa fa-plus-circle"></a></center>     
-                <div class="row"><div class="col-sm-12 col-md-6">
+                      <div class="row"><div class="col-sm-12 col-md-6">
                         <div class="dataTables_length" id="bs4-table_length">
                           <label>Show <select name="bs4-table_length" aria-controls="bs4-table" class="form-control form-control-sm">
                             <option value="10">10</option>
@@ -56,26 +56,27 @@
                       <div class="row"><div class="col-sm-12">
                         <table id="bs4-table" class="table table-striped table-bordered dataTable" style="width: 100%;" role="grid" aria-describedby="bs4-table_info">
 					<thead>
-                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 54px;">Name</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 150px;">Nama Makanan</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 150px;">Harga Makanan</th>
-                           <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 150px;">Foto</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 150px;">deskripsi</th>
-                          {{-- <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 90px;">Foto</th>
-                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 100px;">Harga Ikan</th></tr> --}}
-                    </thead>
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 54px;">No</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 80px;">Nama Ikan</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Kategori Ikan</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 90px;">Nama Makanan</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 90px;">Stok Makanan</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 100px;">Total Pendapatan</th>
+                          <th class="sorting" tabindex="0" aria-controls="bs4-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 100px;">Total Pengeluaran</th>
+                        </thead>
                      <tbody>	
                         @php $no =1; @endphp
-                        @foreach($makanan as $data)
+                        @foreach($databarang as $data)
 								<tr role="row" class="odd">
 										<td class="sorting_1">{{ $no++ }}</td>
-											<td>{{ $data->nama_makanan }}</td>
-                      <td>{{$data->harga_makanan}}</td>
-                      	<td><img src="{{asset('assets/img/makanan/' .$data->foto. '')}}"
-                                      style="width:120px; height:120px;" alt="Foto"></td>
-											<td>{{$data->deskripsi}}</td>                    
-                        <td><a href="{{ route('makanan.edit', $data->id) }}" class="fa  fa-edit"></a></td>
-                        <td><form action="{{ route('makanan.destroy', $data->id) }}" method="post">
+                      <td>{{ $data->nama_ikan }}</td>
+                      <td>{{ $data->kategori->kategori_ikan}}</td>
+											<td>{{ $data->nama_makanan}}</td>
+											<td>{{ $data->stok_makanan}}</td>
+                      <td>{{ $data->total_pendapatan}} </td>
+                      <td>{{ $data->total_pengeluaran}}</td>       
+                      <td><a href="{{ route('databarang.edit', $data->id) }}" class="fa  fa-edit"></a></td>
+                      <td><form action="{{ route('databarang.destroy', $data->id) }}" method="post">
                             {{ csrf_field() }}
                             @if (session('notif'))
                             <div class="alert alert-info">
@@ -90,7 +91,7 @@
                         </tbody>
                     @endforeach
                     </table>
-                    <div class="row"><div class="col-sm-12 col-md-5">
+                     <div class="row"><div class="col-sm-12 col-md-5">
                 </div>
                 <div class="col-sm-12 col-md-7">
                   <div class="dataTables_paginate paging_simple_numbers" id="bs4-table_paginate">
