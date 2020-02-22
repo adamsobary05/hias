@@ -21,4 +21,10 @@ class FrontendController extends Controller
         $makanan = makanan::all();
         return view('makan', compact('makanan'));
     }
+
+    public function detail($id)
+    {
+        $ikan_tawar = ikan::findOrFail($id);
+        return view('frontend.detail', compact('ikan_tawar'));
+    }
 }

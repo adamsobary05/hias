@@ -24,8 +24,8 @@ Route::get('/admin', function () {
 //     return view('dashboardfrontend');
 // });
 Route::get('/', 'FrontendController@show');
-// Route::get('/laut', 'FrontendController@laut');
 Route::get('makan', 'FrontendController@lihat');
+Route::get('detail/{ikan}', 'FrontendController@detail');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 

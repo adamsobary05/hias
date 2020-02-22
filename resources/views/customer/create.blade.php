@@ -43,7 +43,8 @@
                                 <div class="form-group">
                                  <div class="col-md-10">
                                         <div class="form-group">
-                                        <input type="text"  name="jenis_kelamin" class="form-control uang" placeholder="Jenis Kelamin">
+                                        <input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki<br>
+                                        <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan<br>
                                         </div>
                                     </div>
                                   </div>

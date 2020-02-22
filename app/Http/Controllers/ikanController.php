@@ -120,6 +120,6 @@ class ikanController extends Controller
         $ikan = ikan::findOrFail($id);
         $ikan = ikan::findOrFail($id);
         $ikan->delete();
-        return redirect()->route('ikan.index')->with('notif', 'Data Berhasil Dihapus');
+        return redirect()->route('ikan.index');
     }
 }
