@@ -36,9 +36,9 @@
 	<!-- Header -->
 	<header class="header1">
 		<!-- Header desktop -->
-		<div class="container-menu-header">
-			<div class="topbar">
-				<div class="topbar-social">
+		{{-- <div class="container-menu-header">
+			<div class="topbar"> --}}
+				{{-- <div class="topbar-social">
 					<a href="#" class="topbar-social-item fa fa-facebook"></a>
 					<a href="#" class="topbar-social-item fa fa-instagram"></a>
 					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
@@ -60,9 +60,9 @@
 							<option>USD</option>
 							<option>EUR</option>
 						</select>
-					</div>
-				</div>
-			</div>
+					</div> --}}
+				{{-- </div>
+			</div> --}}
 
 			<div class="wrap_header">
 				<!-- Logo -->
@@ -356,21 +356,21 @@
 					<div class="wrap-slick3-dots"></div>
 
 					<div class="slick3">
-						<div class="item-slick3" data-thumb="{{asset('assets/frontend/images/ikankoi1.jpg')}}">
+						<div class="item-slick3" data-thumb="{{asset('assets/frontend/images/koi1.jpg')}}">
 							<div class="wrap-pic-w">
-								<img src="{{asset('assets/frontend/images/ikankoi1.jpg')}}" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-PRODUCT">
 							</div>
 						</div>
 
-						<div class="item-slick3" data-thumb="{{asset('assets/frontend/images/ikankoi2.jpg')}}">
+						<div class="item-slick3" data-thumb="{{asset('assets/frontend/images/koi2.jpg')}}">
 							<div class="wrap-pic-w">
-								<img src="{{asset('assets/frontend/images/ikankoi1.jpg')}}" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi2.jpg')}}" alt="IMG-PRODUCT">
 							</div>
 						</div>
 
-						<div class="item-slick3" data-thumb="{{asset('assets/frontend/images/thumb-item-03.jpg')}}">
+						<div class="item-slick3" data-thumb="{{asset('assets/frontend/images/koi3.jpg')}}">
 							<div class="wrap-pic-w">
-								<img src="{{asset('assets/frontend/images/ikankoi1.jpg')}}" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi3.jpg')}}" alt="IMG-PRODUCT">
 							</div>
 						</div>
 					</div>
@@ -517,7 +517,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="images/item-02.jpg" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -550,7 +550,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-03.jpg" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -583,7 +583,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="assets/img/images/item-05.jpg" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -616,7 +616,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-								<img src="images/item-07.jpg" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -653,7 +653,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="images/item-02.jpg" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -686,7 +686,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-03.jpg" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -719,7 +719,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-05.jpg" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -752,7 +752,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-								<img src="images/item-07.jpg" alt="IMG-PRODUCT">
+								<img src="{{asset('assets/frontend/images/koi1.jpg')}}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">

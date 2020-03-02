@@ -45,11 +45,11 @@
 						</li>
 						
 							<li class="nav-dropdown">
-							<a  href="databarang"><i class="icon dripicons-article"></i><span>Data Barang</span></a>
+							<a  href="databarang"><i class="icon dripicons-article"></i><span>Laporan P&P</span></a>
 						</li>
 
 							<li class="nav-dropdown">
-							<a  href="customer"><i class="icon dripicons-article"></i><span>Data Customer</span></a>
+							<a  href="customer"><i class="icon dripicons-article"></i><span>Customer</span></a>
 						</li>
 
 						</li>

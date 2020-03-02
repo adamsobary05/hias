@@ -14,7 +14,7 @@
     <div class="row">
                 <div class="col-lg-12">
                     {{-- <center><img src="assets/backend/img/netkrom.jpg" width="20%"></center> --}}
-                <center><a><h3 style="color:black">Data customer</a></h3></center>
+                <center><a><h3 style="color:black">Data Customer</a></h3></center>
                 </div>
             </div>
             {{-- <center>

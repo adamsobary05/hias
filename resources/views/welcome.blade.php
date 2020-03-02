@@ -211,37 +211,6 @@
 									</div>
 								</li>
 
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
 							</ul>
 
 							<div class="header-cart-total">
@@ -378,6 +347,12 @@
 
 	<!-- Banner -->
 	<section class="banner bgwhite p-t-40 p-b-40">
+			<div class="container">
+			<div class="sec-title p-b-22">
+				<h3 class="m-text5 t-center">
+					Macam-Macam Ikan Koi
+				</h3>
+			</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
@@ -431,17 +406,8 @@
 					</div>
 
 					<!-- block2 -->
-					<div class="block2 wrap-pic-w pos-relative m-b-30">
-						<img src="{{asset('assets/frontend/images/icons/bg-01.jpg')}}" alt="IMG">
-
-						<div class="block2-content sizefull ab-t-l flex-col-c-m">
-							<h4 class="m-text4 t-center w-size3 p-b-8">
-							Macam-Macam Jenis Ikan Koi
-							</h4>
-
-							<p class="t-center w-size4">
-								ikan koi ini memiliki harga mulai dari Rp.100.000 sampe Rp.900.000
-							</p>
+					<div class="block1 hov-img-zoom pos-relative m-b-30">
+						<img src="{{asset('assets/frontend/images/koi5.jpg')}}" alt="IMG-BENNER">
 
 							<div class="w-size2 p-t-25">
 								<!-- Button -->
@@ -491,13 +457,16 @@
 
 										<div class="block2-overlay trans-0-4">
 											<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-												<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 												<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 											</a>
 
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												<form action="{{url('/masukkeranjang')}}" method="post">
+												{{ csrf_field() }}
+												<input type="hidden" name="id_ikan" value="{{$data->id}}">
+												<input type="hidden" name="qty" value="1">
+												<button type="submit" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
 													Add to Cart
 												</button>
 											</div>
@@ -515,6 +484,7 @@
 									</div>
 								</div>
 							</div>
+							</form>
 							@endforeach
 
 
@@ -634,11 +604,11 @@
 
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
-								<a href="blog-detail.html" class="m-text11">
-									1.Aquarium bentuk kaca biasa.
-  									Aquarium kaca biasa   Aquarium jenis ini bisa dapat anda dapatkan di toko ikan hias air tawar di kota anda atau anda dapat memesan langsung pada toko kaca terdekat agar ukurannya dapat disesuaikan dengan yang anda mau. Harga bervariasi mulai dari Rp. 100.000 sampai dengan Rp. 250.000    
-								</a>
+								<a href="{{url('detail/' .$data->id)}}" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								Lihat Selengkapnya
+							</a>
 							</h4>
+						
 
 							{{-- <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
 							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> --}}
@@ -655,9 +625,9 @@
 
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
-								<a href="blog-detail.html" class="m-text11">
-								2.aquarium berbahan kaca ber-merk biasa dipilih karena lebih cenderung kepada unsur estetika, saya pikir estetika memang harus menjadi alasan utama karena itu alasan anda ingin memelihara ikan hias air tawar di tempat anda. Harga aquarium ini bervariasi mulai dari Rp. 85.000 untuk berbahan akrilik dengan merk GEX sampai dengan Rp. 2.000.000 untuk merk Nisso.
-								</a>
+								<a href="{{url('detail/' .$data->id)}}" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								Lihat Selengkapnya
+							</a>
 							</h4>
 
 							{{-- <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
@@ -679,10 +649,9 @@
 
 						<div class="block3-txt p-t-14">
 							<h4 class="p-b-7">
-								<a href="blog-detail.html" class="m-text11">
-									3.Ikan-ikan hias ini dipelihara untuk kesenangan, oleh karena itu bentuk, warna, ukuran, keserasian, dan kebiasaannya benar-benar harus diperhatikan. Salah satu jenis ikan hias yang sering dipelihara adalah jenis ikan hias air tawar.
-									Hampir 75% pasokan ikan hias air tawar di dunia berasal dari Indonesia, dan sekurang-kurangnya 363 jenis ikan hias air tawar dari Indonesia telah diekspor ke berbagai negara di dunia.
-								</a>
+								<a href="{{url('detail/' .$data->id)}}" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								Lihat Selengkapnya
+							</a>
 							</h4>
 						</div>
 					</div>

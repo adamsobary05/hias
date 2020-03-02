@@ -24,7 +24,7 @@ class FrontendController extends Controller
 
     public function detail($id)
     {
-        $ikan_tawar = ikan::findOrFail($id);
-        return view('frontend.detail', compact('ikan_tawar'));
+        $ikan = ikan::findOrFail($id);
+        return view('frontend.detail', compact('ikan'));
     }
 }

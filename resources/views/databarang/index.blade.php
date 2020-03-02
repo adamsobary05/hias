@@ -13,7 +13,7 @@
     <div class="row">
                 <div class="col-lg-12">
                     {{-- <center><img src="assets/backend/img/netkrom.jpg" width="20%"></center> --}}
-                <center><a><h3 style="color:black">Data Barang Ikan Hias Dan Makanan</a></h3></center>
+                <center><a><h3 style="color:black">Laporan Pemasukan Dan Pengeluaran</a></h3></center>
                 </div>
             </div>
             <center>

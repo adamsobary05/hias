@@ -52,8 +52,7 @@
 
                                 <div class="form-group">
                                     <div class="col-md-6 form-group">
-                                        <label for="keterangan">Keterangan</label>
-                                        <textarea name="keterangan" id="" cols="30" rows="10" class="form-control" style="resize:none"></textarea>
+                                        <textarea name="keterangan" id="" cols="30" rows="10" class="form-control" placeholder="Keterangan" style="resize:none"></textarea>
                                     </div>
                                     <div class="col-md-4">
                                     <div class="form-group">
